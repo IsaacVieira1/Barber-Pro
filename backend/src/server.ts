@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express'
 import 'express-async-errors'
 import cors from 'cors';
 import { router } from './routes'
+import 'express-async-errors';
 
 const app = express();
 
@@ -24,4 +25,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-app.listen(3333, () => console.log("SERVER ONLINE :)"))
+app.listen(process.env.PORT, () => console.log("SERVER ONLINE :)"))
